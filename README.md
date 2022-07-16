@@ -1,47 +1,84 @@
 1st Question
 
 var obj={
+
   "name":"johndoe",
+  
   "age":"23",
+  
   "year":"2018"
+  
 };
+
 
 Getting the request,
+
 var request = new XMLHttpRequest();
+
 request.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+
 request.send();
+
 request.onload=function(){
+
     var result = JSON.parse(request.response);
+    
     console.log(result);
-    for(var i=0;i<result.length;i++){     //FOR LOOP
+    
+    for(var i=0;i<result.length;i++){  
+    
         console.log(result[i].name);
+        
     }
+    
 }
+
 
 for in loop JSON,
+
 for(var key in obj){
+
   console.log(key,obj[key]);
+  
 }
+
 
 for of loop,
+
 for (let [key, value] of Object.entries(obj)) {
+
   console.log(key, value);
+  
 }
 
+
 for each loop,
+
 Object.entries(obj).forEach(([key, value]) => {
+
   console.log(`${key} ${value}`);
+  
 });
 
+
 2nd Question
+
 var resume = {
+
   "FirstName":"Tarakesh",
+  
   "LastName":"K",
+  
   "Role":"Developer",
+  
   "Experience":"0 Years",
+  
   "Languages":"English, Tamil",
+  
   "Education":"B.E",
+  
 };
+
 
 3rd Question
 
